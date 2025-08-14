@@ -40,9 +40,9 @@ export function HeroSection() {
     >
       {/* Large image on the left */}
       <img
-        src="/images/.jpg" // add a picture here 
+        src="/images/IMG_0262.jpg" // add a picture here 
         alt="Tyler Quach"
-        className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-cover rounded-full shadow-lg"
+        className="w-[400px] h-[400px] md:w-[500px] md:h-[500px] object-cover rounded-full shadow-lg"
       />
 
       {/* Text content on the right */}
