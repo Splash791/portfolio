@@ -33,7 +33,7 @@ export function SkillsSection() {
             My Skills
           </h2>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-            A list of the technologies and tools I'm proficient in.
+            A list of the technologies and tools I&apos;m proficient in.
           </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
