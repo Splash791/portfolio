@@ -29,7 +29,7 @@ export function AboutSection() {
         {/*Image*/}
       <div className="flex flex-col items-center md:items-end justify-center h-full">
           <Image
-            src="/images/IMG_2889.jpg"
+            src="/images/tq-yosemite.jpg"
             alt="Tyler Quach Headshot"
             width={300}
             height={300}
