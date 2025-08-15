@@ -9,7 +9,7 @@ export function HeroSection() {
     >
       {/* Large image on the left */}
       <Image
-        src="/images/IMG_0262.jpg"
+        src="/images/tq-yosemite.jpg"
         alt="Tyler Quach"
         width={500} 
         height={500} 
