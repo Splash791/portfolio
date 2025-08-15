@@ -9,7 +9,7 @@ export function ContactSection() {
           Get in Touch
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-12">
-          I'm always open to new opportunities, collaborations, and conversations. Feel free to reach out!
+          I&apos;m always open to new opportunities, collaborations, and conversations. Feel free to reach out!
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
