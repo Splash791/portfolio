@@ -3,12 +3,11 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Bank Interface",
-    tech: "JavaScript, HTML, CSS, Next.js, MongoDB",
-    description:
-      "Personal banking web app with icon-based navigation for accessibility, backed by a MongoDB database for secure account storage and balance tracking.",
-    src: "/images/simpliBank.png",
-    link: "https://github.com/Splash791/SimpliBank",
+    "title": "Expense Tracker",
+    "tech": "Next.js, TypeScript, Tailwind CSS, Tesseract.js, MongoDB",
+    "description": "A full-stack expense tracker with an interactive dashboard, in-browser OCR for receipt scanning, and a persistent, multi-user backend to store data in the cloud.",
+    src: "/images/expenseTracker.png",
+    link: "https://github.com/Splash791/expense-tracker",
   },
   {
     title: "Small Shell",
@@ -23,6 +22,14 @@ const projects = [
     description:
       "Grid-based adventure game using OOP principles like encapsulation, inheritance, and polymorphism, with modular class hierarchy and dynamic event handling. (Class assignment – code not publicly available.)",
     src: "/images/wumpus.png",
+  },
+  {
+    title: "Bank Interface",
+    tech: "JavaScript, HTML, CSS, Next.js, MongoDB",
+    description:
+      "Personal banking web app with icon-based navigation for accessibility, backed by a MongoDB database for secure account storage and balance tracking.",
+    src: "/images/simpliBank.png",
+    link: "https://github.com/Splash791/SimpliBank",
   },
   {
     title: "Discord Bot",
@@ -40,6 +47,7 @@ const projects = [
     src: "/images/albumFinder.png",
     link: "https://github.com/Splash791/AlbumFinder",
   },
+
 ];
 
 export function PortfolioSection() {
