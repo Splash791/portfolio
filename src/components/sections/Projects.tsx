@@ -7,49 +7,49 @@ import Link from "next/link";
 const projects = [
   {
     id: "01",
-    title: "AI Code Review Agent",
-    mission: "Automating rigorous PR reviews using LLMs and static analysis.",
+    title: "Bastinel",
+    mission: "Detecting Hallucinations in Large Language Models.",
     destination: "production",
     status: "boarding",
     gate: "A12",
     seat: "01A",
-    tags: ["Next.js", "Python", "OpenAI API", "Docker"],
+    tags: ["OpenRouter", "AWS", "Typescript", "React", "ShadCN UI"],
     link: "https://github.com",
     github: "https://github.com",
   },
   {
     id: "02",
-    title: "Distributed Task Queue",
-    mission: "High-throughput fault-tolerant queue system for microservices.",
+    title: "Expense Tracker",
+    mission: "Centralized database for tracking your daily expenses.",
     destination: "beta",
     status: "departed",
     gate: "B04",
     seat: "14C",
-    tags: ["Go", "Redis", "gRPC", "Kubernetes"],
+    tags: ["OpenCV", "Tesseract OCR", "MongoDB", "Typescript"],
     link: "https://github.com",
     github: "https://github.com",
   },
   {
     id: "03",
-    title: "Travel Itinerary Generator",
-    mission: "Smart routing and constraint-satisfaction for complex trip planning.",
+    title: "AI Quiz Generator",
+    mission: "Web application for generating practice quizzes for exams.",
     destination: "live",
     status: "arrived",
     gate: "C09",
     seat: "22F",
-    tags: ["React", "TypeScript", "Tailwind", "PostgreSQL"],
+    tags: ["React", "Next.js", "ShadCN UI", "React", "MongoDB", "Typescript"],
     link: "https://github.com",
     github: "https://github.com",
   },
   {
     id: "04",
-    title: "Predictive Health Model",
-    mission: "Time-series forecasting for early detection of anomalous vital signs.",
+    title: "Small Shell",
+    mission: "A custom Unix shell with I/O redirection, background processes, and signals.",
     destination: "research",
     status: "boarding",
     gate: "D01",
     seat: "05B",
-    tags: ["PyTorch", "Pandas", "Scikit-Learn", "AWS"],
+    tags: ["C"],
     link: "https://github.com",
     github: "https://github.com",
   },
@@ -70,12 +70,12 @@ export function Projects() {
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <PlaneTakeoff className="size-5 text-slate-400" />
-                <h2 className="text-3xl font-medium tracking-tight text-slate-50">Recent Expeditions</h2>
+                <h2 className="text-3xl font-medium tracking-tight text-slate-50">My Projects</h2>
               </div>
               <p className="text-slate-400 font-light">Select projects across systems and intelligence.</p>
             </div>
-            <Link href="https://github.com" target="_blank" className="hidden md:flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
-              View All Flights <ExternalLink className="size-4" />
+            <Link href="/projects" className="hidden md:flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
+              View All Projects <ExternalLink className="size-4" />
             </Link>
           </div>
         </motion.div>

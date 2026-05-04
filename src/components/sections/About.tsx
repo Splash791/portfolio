@@ -46,9 +46,8 @@ export function About() {
                 <h3 className="text-sm font-mono text-slate-500 tracking-wider uppercase mb-3">Core Coordinates</h3>
                 <ul className="space-y-2 text-slate-300">
                   <li>Full-Stack Engineering</li>
-                  <li>Distributed Systems</li>
+                  <li>Web & Mobile Development</li>
                   <li>Machine Learning / AI</li>
-                  <li>System Architecture</li>
                 </ul>
               </div>
             </div>

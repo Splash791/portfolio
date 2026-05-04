@@ -2,36 +2,40 @@
 
 import { motion } from "framer-motion";
 import { Map } from "lucide-react";
-import { PassportStamp } from "@/components/ui/PassportStamp";
 import { Radar } from "@/components/ui/Radar";
 
 const experiences = [
   {
     id: 1,
     role: "Software Engineering Intern",
-    company: "Tech Company",
-    location: "San Francisco, CA",
-    date: "Jun 2025 - Sep 2025",
-    description: "Architected a scalable microservice using Go and gRPC, reducing latency by 40%. Implemented an event-driven architecture with Kafka for real-time data processing.",
-    type: "industry" as const,
+    company: "Deloitte",
+    location: "Portland, OR",
+    date: "Jun 2026 - Present",
+    description: "Incoming Summer 2026.",
   },
   {
     id: 2,
-    role: "Undergraduate Researcher",
-    company: "OSU AI Lab",
+    role: "Machine Learning Research Assistant",
+    company: "Oregon State University",
     location: "Corvallis, OR",
-    date: "Jan 2024 - Present",
-    description: "Developing novel reinforcement learning algorithms for robotic navigation. Co-authored a paper submitted to ICRA 2025.",
-    type: "research" as const,
+    date: "Dec 2025 - Present",
+    description: "Creating data validation and transformation workflows to ensure high-quality, consistent datasets, improving reliability and efficiency for large-scale machine learning experiments on HPC infrastructure. Applying automated data pipelines to support large-scale AI model training and machine learning experiments, improving efficiency, performance, scalability, and overall research outcomes.",
   },
   {
     id: 3,
-    role: "Software Engineering Intern",
-    company: "Startup Inc",
-    location: "Remote",
-    date: "Jun 2024 - Sep 2024",
-    description: "Built the core MVP using Next.js and Supabase. Integrated Stripe for payments and set up CI/CD pipelines via GitHub Actions.",
-    type: "industry" as const,
+    role: "Community Relations Representative",
+    company: "Oregon State University - APCC",
+    location: "Corvallis, OR",
+    date: "May 2025 - Present",
+    description: "Co-planned and executed annual identity-based events reaching 300+ students, local businesses, and campus partners. Engaged with peers and visitors to create a welcoming atmosphere for underrepresented communities.",
+  },
+   {
+    id: 4,
+    role: "Mobile Development Intern",
+    company: "COORDINATOR",
+    location: "Portland, OR",
+    date: "Jan 2026 - Apr 2026",
+    description: "Leading the migration of an existing web application to a cross-platform mobile app using React Native and Expo, ensuring functionality and performance across iOS and Android while maintaining feature parity with the web product. Integrating and managing backend connectivity with Better Auth and TanStack Query, implementing secure authentication flows, efficient API communication, and reliable client-side data caching tailored for mobile architecture.",
   },
 ];
 
@@ -76,8 +80,6 @@ export function Experience() {
 
               {/* Content column */}
               <div className="pl-8 md:pl-8 pb-4 relative w-full">
-                {/* Passport Stamp positioned absolutely within the content column */}
-                <PassportStamp type={exp.type} className="-top-4 right-0 md:right-8" />
                 
                 {/* Date (Mobile) */}
                 <div className="md:hidden mb-2">
@@ -89,9 +91,6 @@ export function Experience() {
                 <p className="text-slate-400 font-light leading-relaxed mb-4 max-w-xl">
                   {exp.description}
                 </p>
-                <span className="text-xs font-mono text-slate-500 uppercase tracking-widest px-2 py-1 bg-slate-900 rounded border border-slate-800">
-                  {exp.type}
-                </span>
               </div>
             </motion.div>
           ))}

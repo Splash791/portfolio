@@ -25,14 +25,14 @@ export function Hero() {
           className="relative shrink-0"
         >
           {/* Passport Photo Frame */}
-          <div className="relative w-48 h-64 md:w-64 md:h-80 bg-sand p-3 shadow-2xl rounded-sm transform rotate-2 hover:rotate-0 transition-transform duration-500">
+          <div className="relative w-80 h-[400px] md:w-96 md:h-[500px] bg-sand p-3 shadow-2xl rounded-sm transform rotate-2 hover:rotate-0 transition-transform duration-500">
             <div className="absolute inset-0 border border-navy/10 pointer-events-none" />
             <div className="w-full h-full relative overflow-hidden bg-slate-200">
               <Image 
-                src="/passport.png" 
+                src="/tquach.JPG" 
                 alt="Tyler Quach Passport Photo" 
                 fill
-                className="object-cover contrast-125 grayscale-[20%]"
+                className="object-cover"
                 priority
               />
             </div>
@@ -52,8 +52,8 @@ export function Hero() {
           className="max-w-3xl"
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="h-px w-20 bg-slate-500"></span>
-            <span className="text-4xl sm:text-5xl lg:text-6xl font-mono text-slate-300 tracking-wider uppercase font-bold">
+            <span className="h-px w-24 bg-slate-500"></span>
+            <span className="text-6xl sm:text-7xl lg:text-[5rem] font-mono text-slate-300 tracking-wider uppercase font-bold leading-none">
               Tyler Quach
             </span>
           </div>
@@ -63,13 +63,13 @@ export function Hero() {
           </h1>
           
           <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed font-light">
-            A short description about me. Engineering rigorous systems and exploring new problem spaces.
+            Third Year CS with a foucs in AI/ML
           </p>
           
           <div className="flex flex-wrap items-center gap-4">
             <Button asChild size="lg" className="rounded-full bg-sand text-navy hover:bg-white font-medium group">
               <Link href="#projects">
-                View Expeditions <ArrowRight className="ml-2 size-4 group-hover:translate-x-1 transition-transform" />
+                View Projects <ArrowRight className="ml-2 size-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </div>
