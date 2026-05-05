@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tyler Quach | Software Engineer",
-  description: "Computer Science student at Oregon State University. Engineering rigorous systems and exploring new problem spaces.",
+  title: "Tyler Quach Portfolio",
+  description: "My travel inspired portfolio.",
 };
 
 export default function RootLayout({

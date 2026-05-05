@@ -9,17 +9,13 @@ export function Footer() {
           © {new Date().getFullYear()} Tyler Quach. All rights reserved.
         </p>
         <div className="flex items-center gap-6">
-          <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+          <Link href="https://github.com/Splash791" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
             <span className="sr-only">GitHub</span>
             <Code className="size-5" />
           </Link>
-          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+          <Link href="https://www.linkedin.com/in/tyler-quach-/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
             <span className="sr-only">LinkedIn</span>
             <Briefcase className="size-5" />
-          </Link>
-          <Link href="mailto:contact@example.com" className="hover:text-white transition-colors">
-            <span className="sr-only">Email</span>
-            <Mail className="size-5" />
           </Link>
         </div>
       </div>

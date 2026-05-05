@@ -29,13 +29,21 @@ const experiences = [
     date: "May 2025 - Present",
     description: "Co-planned and executed annual identity-based events reaching 300+ students, local businesses, and campus partners. Engaged with peers and visitors to create a welcoming atmosphere for underrepresented communities.",
   },
-   {
+  {
     id: 4,
     role: "Mobile Development Intern",
     company: "COORDINATOR",
     location: "Portland, OR",
     date: "Jan 2026 - Apr 2026",
     description: "Leading the migration of an existing web application to a cross-platform mobile app using React Native and Expo, ensuring functionality and performance across iOS and Android while maintaining feature parity with the web product. Integrating and managing backend connectivity with Better Auth and TanStack Query, implementing secure authentication flows, efficient API communication, and reliable client-side data caching tailored for mobile architecture.",
+  },
+  {
+    id: 5,
+    role: "Undergraduate Learning Assistant",
+    company: "Oregon State University",
+    location: "Corvallis, OR",
+    date: "Dec 2026 - Mar 2026",
+    description: "Leading weekly recitations of 30+ students, grading assignments, and holding office hours for CS162: Introduction to Computer Science II.",
   },
 ];
 

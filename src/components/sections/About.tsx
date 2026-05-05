@@ -20,19 +20,19 @@ export function About() {
         >
           <div className="flex items-center gap-3 mb-12">
             <Compass className="size-5 text-slate-400" />
-            <h2 className="text-3xl font-medium tracking-tight text-slate-50">About the Engineer</h2>
+            <h2 className="text-3xl font-medium tracking-tight text-slate-50">About Me</h2>
           </div>
           
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-8 space-y-6 text-slate-400 leading-relaxed font-light text-lg">
               <p>
-                My approach to software engineering mirrors how one navigates a new city: with deep curiosity, a map of fundamental principles, and an eye for how complex systems intersect. I am driven by the architecture of problem-solving—stripping away the noise to build elegant, robust solutions.
+                My approach to software engineering is to build with purpose. I am driven by the challenge of understanding and solving complex problems — similar to my passion for travel and immersing myself in new environments and cultures.
               </p>
               <p>
-                As a Computer Science student at Oregon State University, my expeditions have ranged from theoretical research to practical, high-impact internships. Whether I'm optimizing database queries or designing intuitive user interfaces, I view every challenge as an opportunity to understand a new domain and map out a better path forward.
+                As a Computer Science student at Oregon State University, my expeditions have ranged from theoretical research to practical, high-impact internships. Whether I'm leading a recitation for CS162 or building a full-stack application, I view every challenge as an opportunity to understand a new domain and map out a better path forward.
               </p>
               <p>
-                I thrive in environments where technical rigor meets uncharted territory. For me, code is the ultimate passport—a tool to cross boundaries, translate ideas into reality, and continuously explore the frontiers of what's possible in technology.
+                I thrive in environments where technical rigor meets uncharted territory. For me, code is the ultimate passport: a tool to cross boundaries, translate ideas into reality, and continuously explore the frontiers of what's possible in technology.
               </p>
             </div>
             

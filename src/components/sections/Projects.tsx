@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PlaneTakeoff, ExternalLink, Code2 } from "lucide-react";
+import { PlaneTakeoff, ExternalLink, Code2, Lock } from "lucide-react";
 import Link from "next/link";
 
 const projects = [
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     id: "03",
-    title: "AI Quiz Generator",
+    title: "Minerva AI",
     mission: "Web application for generating practice quizzes for exams.",
     destination: "live",
     status: "arrived",
@@ -49,13 +49,19 @@ const projects = [
     status: "boarding",
     gate: "D01",
     seat: "05B",
-    tags: ["C"],
-    link: "https://github.com",
-    github: "https://github.com",
+    tags: ["C", "UNIX", "Systems"],
+    link: "",
+    github: "",
+    restricted: true,
   },
 ];
 
 export function Projects() {
+  const handleRestrictedClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert("This code is not publicly available due to academic integrity policies for school projects.");
+  };
+
   return (
     <section id="projects" className="py-24 relative bg-navy-light/30 min-h-screen flex items-center">
       <div className="container px-6 max-w-5xl mx-auto">
@@ -93,7 +99,7 @@ export function Projects() {
               {/* Boarding pass perforated edge effect */}
               <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-navy-light/30 rounded-full border border-slate-800 group-hover:border-slate-600 transition-colors z-10 hidden sm:block"></div>
               <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 bg-navy-light/30 rounded-full border border-slate-800 group-hover:border-slate-600 transition-colors z-10 hidden sm:block"></div>
-              
+
               <div className="flex">
                 {/* Main Pass Area */}
                 <div className="p-6 flex-1 pr-8">
@@ -104,32 +110,32 @@ export function Projects() {
                     </div>
                     <PlaneTakeoff className="size-6 text-slate-700 group-hover:text-sand group-hover:translate-x-4 group-hover:-translate-y-4 transition-all duration-500 opacity-0 group-hover:opacity-100 absolute top-6 right-32" />
                   </div>
-                  
+
                   <div className="flex gap-6 mb-4">
-                     <div>
-                       <span className="text-[10px] font-mono text-slate-500 block uppercase">Gate</span>
-                       <span className="text-lg font-mono text-slate-300">{project.gate}</span>
-                     </div>
-                     <div>
-                       <span className="text-[10px] font-mono text-slate-500 block uppercase">Seat</span>
-                       <span className="text-lg font-mono text-slate-300">{project.seat}</span>
-                     </div>
-                     <div>
-                       <span className="text-[10px] font-mono text-slate-500 block uppercase">Status</span>
-                       <span className={`text-xs font-mono uppercase px-2 py-0.5 rounded border inline-block mt-1
-                        ${project.status === 'arrived' ? 'border-emerald-500/30 text-emerald-400' : 
-                          project.status === 'boarding' ? 'border-amber-500/30 text-amber-400' : 
-                          'border-blue-500/30 text-blue-400'}`}>
+                    <div>
+                      <span className="text-[10px] font-mono text-slate-500 block uppercase">Gate</span>
+                      <span className="text-lg font-mono text-slate-300">{project.gate}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-mono text-slate-500 block uppercase">Seat</span>
+                      <span className="text-lg font-mono text-slate-300">{project.seat}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-mono text-slate-500 block uppercase">Status</span>
+                      <span className={`text-xs font-mono uppercase px-2 py-0.5 rounded border inline-block mt-1
+                        ${project.status === 'arrived' ? 'border-emerald-500/30 text-emerald-400' :
+                          project.status === 'boarding' ? 'border-amber-500/30 text-amber-400' :
+                            'border-blue-500/30 text-blue-400'}`}>
                         {project.status}
                       </span>
-                     </div>
+                    </div>
                   </div>
-                  
+
                   <div className="mb-6 border-y border-dashed border-slate-800 py-4">
                     <span className="text-[10px] font-mono text-slate-500 uppercase block mb-1">Mission Brief</span>
                     <p className="text-slate-400 font-light text-sm">{project.mission}</p>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
                       <span key={tag} className="text-[10px] font-mono text-slate-400 bg-slate-900 px-2 py-1 rounded-sm">
@@ -142,12 +148,26 @@ export function Projects() {
                 {/* Tear-off Stub */}
                 <div className="w-24 border-l border-dashed border-slate-700 p-4 flex flex-col justify-between items-center bg-navy-light/20 relative">
                   <div className="flex gap-3 flex-col items-center pt-2">
-                    <Link href={project.github} target="_blank" className="text-slate-500 hover:text-white transition-colors">
-                      <Code2 className="size-5" />
-                    </Link>
-                    <Link href={project.link} target="_blank" className="text-slate-500 hover:text-white transition-colors">
-                      <ExternalLink className="size-5" />
-                    </Link>
+                    {(project as any).restricted ? (
+                      <div className="w-full flex justify-center py-2">
+                        <button onClick={handleRestrictedClick} className="text-slate-500 hover:text-red-400 transition-colors" title="Private Repository">
+                          <Lock className="size-5" />
+                        </button>
+                      </div>
+                    ) : (
+                      <>
+                        {project.github && (
+                          <Link href={project.github} target="_blank" className="text-slate-500 hover:text-white transition-colors">
+                            <Code2 className="size-5" />
+                          </Link>
+                        )}
+                        {project.link && (
+                          <Link href={project.link} target="_blank" className="text-slate-500 hover:text-white transition-colors">
+                            <ExternalLink className="size-5" />
+                          </Link>
+                        )}
+                      </>
+                    )}
                   </div>
 
                   {/* Vertical Barcode */}
