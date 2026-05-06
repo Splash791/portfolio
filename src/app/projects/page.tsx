@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft, Code2, ExternalLink, Lock } from "lucide-react";
 import { SplitFlap } from "@/components/ui/SplitFlap";
+import { FlatMap } from "@/components/ui/FlatMap";
 
 const allProjects = [
   {
@@ -102,13 +103,14 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-navy text-slate-300 pt-32 pb-24 font-mono relative overflow-hidden">
+      <FlatMap />
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none"
         style={{ backgroundImage: `radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 60%)` }}>
       </div>
 
       <div className="container px-4 max-w-6xl mx-auto relative z-10">
         <Link href="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors mb-12 group uppercase tracking-widest text-sm">
-          <ArrowLeft className="size-4 group-hover:-translate-x-1 transition-transform" /> Back to Itinerary
+          <ArrowLeft className="size-4 group-hover:-translate-x-1 transition-transform" /> Back to the Main Page
         </Link>
 
         <motion.div

@@ -32,7 +32,7 @@ export function About() {
                 As a Computer Science student at Oregon State University, my expeditions have ranged from theoretical research to practical, high-impact internships. Whether I'm leading a recitation for CS162 or building a full-stack application, I view every challenge as an opportunity to understand a new domain and map out a better path forward.
               </p>
               <p>
-                I thrive in environments where technical rigor meets uncharted territory. For me, code is the ultimate passport: a tool to cross boundaries, translate ideas into reality, and continuously explore the frontiers of what's possible in technology.
+                A lifelong goal of mine is to travel to all 195 countries in the world. Whenever I have free time, I’m usually working on side projects, planning my next trip, spending time at the gym, or finding new foods to try.
               </p>
             </div>
             

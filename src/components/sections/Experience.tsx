@@ -11,7 +11,9 @@ const experiences = [
     company: "Deloitte",
     location: "Portland, OR",
     date: "Jun 2026 - Present",
-    description: "Incoming Summer 2026.",
+    description: [
+      "Incoming Summer 2026."
+    ],
   },
   {
     id: 2,
@@ -19,7 +21,10 @@ const experiences = [
     company: "Oregon State University",
     location: "Corvallis, OR",
     date: "Dec 2025 - Present",
-    description: "Creating data validation and transformation workflows to ensure high-quality, consistent datasets, improving reliability and efficiency for large-scale machine learning experiments on HPC infrastructure. Applying automated data pipelines to support large-scale AI model training and machine learning experiments, improving efficiency, performance, scalability, and overall research outcomes.",
+    description: [
+      "Creating data validation and transformation workflows to ensure high-quality, consistent datasets, improving reliability and efficiency for large-scale machine learning experiments on HPC infrastructure.",
+      "Applying automated data pipelines to support large-scale AI model training and machine learning experiments, improving efficiency, performance, scalability, and overall research outcomes."
+    ],
   },
   {
     id: 3,
@@ -27,7 +32,10 @@ const experiences = [
     company: "Oregon State University - APCC",
     location: "Corvallis, OR",
     date: "May 2025 - Present",
-    description: "Co-planned and executed annual identity-based events reaching 300+ students, local businesses, and campus partners. Engaged with peers and visitors to create a welcoming atmosphere for underrepresented communities.",
+    description: [
+      "Co-planned and executed annual identity-based events reaching 300+ students, local businesses, and campus partners.",
+      "Engaged with peers and visitors to create a welcoming atmosphere for underrepresented communities."
+    ],
   },
   {
     id: 4,
@@ -35,7 +43,10 @@ const experiences = [
     company: "COORDINATOR",
     location: "Portland, OR",
     date: "Jan 2026 - Apr 2026",
-    description: "Leading the migration of an existing web application to a cross-platform mobile app using React Native and Expo, ensuring functionality and performance across iOS and Android while maintaining feature parity with the web product. Integrating and managing backend connectivity with Better Auth and TanStack Query, implementing secure authentication flows, efficient API communication, and reliable client-side data caching tailored for mobile architecture.",
+    description: [
+      "Leading the migration of an existing web application to a cross-platform mobile app using React Native and Expo, ensuring functionality and performance across iOS and Android while maintaining feature parity with the web product.",
+      "Integrating and managing backend connectivity with Better Auth and TanStack Query, implementing secure authentication flows, efficient API communication, and reliable client-side data caching tailored for mobile architecture."
+    ],
   },
   {
     id: 5,
@@ -43,7 +54,10 @@ const experiences = [
     company: "Oregon State University",
     location: "Corvallis, OR",
     date: "Dec 2026 - Mar 2026",
-    description: "Leading weekly recitations of 30+ students, grading assignments, and holding office hours for CS162: Introduction to Computer Science II.",
+    description: [
+      "Leading weekly recitations of 30+ students and holding office hours for CS162: Introduction to Computer Science II.",
+      "Evaluating student progress and providing constructive feedback through comprehensive grading of assignments."
+    ],
   },
 ];
 
@@ -62,9 +76,9 @@ export function Experience() {
         >
           <div className="flex items-center gap-3 mb-2">
             <Map className="size-5 text-slate-400" />
-            <h2 className="text-3xl font-medium tracking-tight text-slate-50">Itinerary</h2>
+            <h2 className="text-3xl font-medium tracking-tight text-slate-50">Experience</h2>
           </div>
-          <p className="text-slate-400 font-light">The professional journey so far.</p>
+          <p className="text-slate-400 font-light">My professional journey so far.</p>
         </motion.div>
 
         <div className="relative border-l border-slate-800 ml-4 md:ml-0 md:pl-0">
@@ -96,9 +110,13 @@ export function Experience() {
                 
                 <h3 className="text-xl font-medium text-slate-200 mb-1">{exp.role}</h3>
                 <h4 className="text-lg text-slate-400 font-light mb-4">{exp.company}</h4>
-                <p className="text-slate-400 font-light leading-relaxed mb-4 max-w-xl">
-                  {exp.description}
-                </p>
+                <ul className="text-slate-400 font-light leading-relaxed mb-4 max-w-xl list-disc pl-4 space-y-2">
+                  {Array.isArray(exp.description) ? (
+                    exp.description.map((point, i) => <li key={i}>{point}</li>)
+                  ) : (
+                    <li>{exp.description}</li>
+                  )}
+                </ul>
               </div>
             </motion.div>
           ))}

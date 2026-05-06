@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { PlaneTakeoff, ExternalLink, Code2, Lock } from "lucide-react";
 import Link from "next/link";
+import { FlatMap } from "@/components/ui/FlatMap";
 
 const projects = [
   {
@@ -64,7 +65,8 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-24 relative bg-navy-light/30 min-h-screen flex items-center">
-      <div className="container px-6 max-w-5xl mx-auto">
+      <FlatMap />
+      <div className="container px-6 max-w-5xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
