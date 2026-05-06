@@ -82,7 +82,7 @@ export function Hero() {
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-xs font-mono text-slate-500 tracking-widest uppercase">Departure</span>
+        {/* <span className="text-xs font-mono text-slate-500 tracking-widest uppercase">Departure</span> */}
         <div className="w-px h-12 bg-gradient-to-b from-slate-500 to-transparent"></div>
       </motion.div>
     </section>
